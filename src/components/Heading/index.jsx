@@ -9,7 +9,7 @@ export const Heading = ({
   uppercase = false,
 }) => {
   return (
-    <k.Title olorDark={colorDark} as={as} size={size} uppercase={uppercase}>
+    <k.Title colorDark={colorDark} as={as} size={size} uppercase={uppercase}>
       {children}
     </k.Title>
   );
