@@ -1,9 +1,6 @@
+import * as k from './styles';
 function Home() {
-  return (
-    <div>
-      <h1>HELLO WORLD</h1>
-    </div>
-  );
+  return <k.Container>HELLO WORLD</k.Container>;
 }
 
 export default Home;
