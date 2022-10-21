@@ -2,7 +2,7 @@ import P from 'prop-types';
 import * as k from './styles';
 
 export const TextComponent = ({ children }) => {
-  return <k.Container>{children}</k.Container>;
+  return <k.Container dangerouslySetInnerHTML={{ __html: children }} />;
 };
 
 TextComponent.propTypes = {
