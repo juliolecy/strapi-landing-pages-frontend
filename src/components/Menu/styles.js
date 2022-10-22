@@ -45,7 +45,7 @@ export const Container = styled.div`
       }
 
       & ${Heading} {
-        padding-bottom: ${theme.spacings.large};
+        padding-bottom: 0;
         display: flex;
         justify-content: center;
       }

@@ -43,7 +43,7 @@ describe('map-menu', () => {
     expect(menu.links[0].link).toBe('#pricing');
   });
 
-  it('should return an empty array if no links', () => {
+  it('should return an empty array if there inst links', () => {
     const links = mapMenuLinks();
     expect(links).toEqual([]);
   });
