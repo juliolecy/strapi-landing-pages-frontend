@@ -23,7 +23,7 @@ function Home() {
       try {
         console.log('fetching');
         const data = await fetch(
-          'http://localhost:1337/api/pages/1?populate=deep',
+          'http://https://strapi-landing-pages-v4.herokuapp.com/api/pages/1?populate=deep',
         );
         const json = await data.json();
         console.log(json.data.attributes);
