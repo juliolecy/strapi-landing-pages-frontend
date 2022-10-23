@@ -15,7 +15,6 @@ root.render(
           <Route to="*" component={Home} />
         </Switch>
         <GlobalStyles />
-        <Home />
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,

@@ -4,7 +4,7 @@ import * as k from './styles';
 
 export const SectionBackground = ({
   children,
-  background = false,
+  background = true,
   sectionId = '',
 }) => {
   return (

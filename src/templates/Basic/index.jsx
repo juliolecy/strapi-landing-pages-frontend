@@ -3,16 +3,12 @@ import * as k from './styles';
 import { Menu } from '../../components/Menu';
 import { Footer } from '../../components/Footer';
 import { GoTop } from '../../components/GoTop';
-import links from '../../components/NavLinks/mock';
 
-export const Basic = ({ links = [], logoData, footerHtml, children }) => {
+export const Basic = ({ links, logoData, footerHtml, children }) => {
   return (
     <>
       <Menu links={links} logoData={logoData} />
-      <k.Container>
-        {children}
-        <Footer footerHtml={footerHtml} />
-      </k.Container>
+      <k.Container>{children}</k.Container>
       <GoTop />
     </>
   );

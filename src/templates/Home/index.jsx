@@ -22,9 +22,12 @@ function Home() {
     const load = async () => {
       try {
         console.log('fetching');
-        const data = await fetch(config.url + slug + '&populate=deep');
+        const data = await fetch(
+          'http://localhost:1337/api/pages/1?populate=deep',
+        );
         const json = await data.json();
-        const { attributes } = json.data[0];
+        console.log(json.data.attributes);
+        const { attributes } = json.data;
         const pageData = mapData([attributes]);
         setData(() => pageData[0]);
       } catch (e) {
@@ -58,11 +61,17 @@ function Home() {
   }
 
   const { menu, sections, footerHtml, slug } = data;
+  console.log(data);
   const { links, text, link, imageSrc } = menu;
+  console.log(menu);
 
   return (
-    <Basic {...mockBasic}>
-      {/* {sections.map((section, index) => {
+    <Basic
+      links={links}
+      footerHtml={footerHtml}
+      logoData={{ text, link, imageSrc }}
+    >
+      {sections.map((section, index) => {
         const { component } = section;
         const key = `${slug}=${index}`;
 
@@ -73,15 +82,7 @@ function Home() {
         if (component === 'section.section-content') {
           return <GridContent key={key} {...section} />;
         }
-
-        if (component === 'section.section-grid-text') {
-          return <GridText key={key} {...section} />;
-        }
-
-        if (component === 'section.section-grid-image') {
-          return <GridImage key={key} {...section} />;
-        }
-      })} */}
+      })}
     </Basic>
   );
 }

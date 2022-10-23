@@ -3,12 +3,12 @@ import * as k from './styles';
 import { SectionBackground } from '../SectionBackground';
 import { Heading } from '../Heading';
 import { TextComponent } from '../TextComponent';
+import Javascript from '../../assets/javascript.svg';
 
 export const GridTwoColumns = ({
   title,
   text,
-  srcImg,
-  background = false,
+  background = true,
   sectionId = '',
 }) => {
   return (
@@ -21,7 +21,7 @@ export const GridTwoColumns = ({
           <TextComponent>{text}</TextComponent>
         </k.TextContainer>
         <k.ImageContainer>
-          <k.Image src={srcImg} alt={title} />
+          <k.Image src={Javascript} alt={title} />
         </k.ImageContainer>
       </k.Container>
     </SectionBackground>
@@ -31,7 +31,6 @@ export const GridTwoColumns = ({
 GridTwoColumns.propTypes = {
   title: P.string.isRequired,
   text: P.string.isRequired,
-  srcImg: P.string.isRequired,
   background: P.bool,
   sectionId: P.string,
 };
